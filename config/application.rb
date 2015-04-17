@@ -24,5 +24,7 @@ module CinekeeperApi
     config.active_record.raise_in_transactional_callbacks = true
 
     config.action_mailer.default_url_options = { host: ENV['DEFAULT_HOST'] }
+
+    config.i18n.default_locale = :de
   end
 end
