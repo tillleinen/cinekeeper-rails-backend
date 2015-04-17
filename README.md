@@ -16,7 +16,9 @@ rake db:setup
 
 Copy ```.env.example``` to ```.env``` and ```config/database.yml.example``` to ```config/database.yml```. Then adjust according to your setup.
 
-## Start Server
+## Development
+
+### Start Server
 
 ```bash
 postgres # or other command to start your DB
