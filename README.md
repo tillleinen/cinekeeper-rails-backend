@@ -2,19 +2,22 @@
 
 API for the cinekeeper website
 
-## Installation
+## Getting Started
 
 ### Prerequisites
 * RVM with ruby 2.1.5
 * bundler
 * PostgreSQL
 
+Copy ```.env.example``` to ```.env``` and ```config/database.yml.example``` to ```config/database.yml```. Then adjust according to your setup.
+
+### Installation
+
 ```bash
 bundle install
 rake db:setup
 ```
 
-Copy ```.env.example``` to ```.env``` and ```config/database.yml.example``` to ```config/database.yml```. Then adjust according to your setup.
 
 ## Development
 
