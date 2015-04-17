@@ -1,1 +1,2 @@
-collection @video_categories
+collection :@video_categories
+attributes :id, :name, :image
