@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "admin/dashboard#index"
 
   scope defaults: {format: 'json'} do
-    resources :video_category, only: :index
+    resources :video_categories, only: :index
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
