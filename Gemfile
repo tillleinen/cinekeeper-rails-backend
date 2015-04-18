@@ -48,6 +48,8 @@ gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
+gem 'fog'
+
 gem 'acts_as_list'
 gem 'activeadmin-sortable'
 gem 'rabl-rails'
