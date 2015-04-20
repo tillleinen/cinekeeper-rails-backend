@@ -5,6 +5,7 @@ API for the cinekeeper website
 ## Getting Started
 
 ### Prerequisites
+* imagemagick (e.g. via brew install imagemagick)
 * RVM with ruby 2.1.5
 * bundler
 * PostgreSQL
@@ -17,7 +18,6 @@ Copy ```.env.example``` to ```.env``` and ```config/database.yml.example``` to `
 bundle install
 rake db:setup
 ```
-
 
 ## Development
 
