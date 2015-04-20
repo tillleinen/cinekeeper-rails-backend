@@ -10,5 +10,4 @@ ActiveAdmin.register VideoCategory do
     column :image
     actions
   end
-
 end
