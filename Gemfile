@@ -47,6 +47,7 @@ end
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog'
 
