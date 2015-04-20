@@ -3,4 +3,10 @@ ActiveAdmin.register Photo do
   sortable
 
   permit_params :position, :image
+
+  index do
+    sortable_handle_column
+    column :image
+    actions
+  end
 end
