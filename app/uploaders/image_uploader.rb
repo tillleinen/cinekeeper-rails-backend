@@ -49,4 +49,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  process :store_dimensions
+
+  private
+
+  def store_dimensions
+    if file && model && model.has_attribute?(:width) && model.has_attribute?(:height)
+      model.width, model.height = ::MiniMagick::Image.open(file.file)[:dimensions]
+    end
+  end
+
 end

@@ -1,2 +1,2 @@
 collection :@photos
-attributes :id, :image
+attributes :id, :image, :width, :height
