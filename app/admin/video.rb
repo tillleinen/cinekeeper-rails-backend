@@ -9,6 +9,7 @@ ActiveAdmin.register Video do
   index do
     sortable_handle_column
     column :name
+    column :slug
     column :video_id
     column :image
     column :video_category

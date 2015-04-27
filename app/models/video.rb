@@ -19,10 +19,13 @@
 #
 
 class Video < ActiveRecord::Base
+  extend FriendlyId
   default_scope { order(:position) }
   
   belongs_to :video_category
 
   mount_uploader :image, ImageUploader
   acts_as_list scope: :video_category
+
+  friendly_id :name, use: [:slugged, :finders]
 end

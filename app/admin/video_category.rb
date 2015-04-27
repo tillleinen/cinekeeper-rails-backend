@@ -7,6 +7,7 @@ ActiveAdmin.register VideoCategory do
   index do
     sortable_handle_column
     column :name
+    column :slug
     column :image
     actions
   end
