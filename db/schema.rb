@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420132551) do
+ActiveRecord::Schema.define(version: 20150427094024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(version: 20150420132551) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
   create_table "photos", force: :cascade do |t|
     t.string   "image"
     t.integer  "position"
@@ -64,7 +77,10 @@ ActiveRecord::Schema.define(version: 20150420132551) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "video_categories", ["slug"], name: "index_video_categories_on_slug", unique: true, using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.integer  "video_category_id"
@@ -74,8 +90,10 @@ ActiveRecord::Schema.define(version: 20150420132551) do
     t.integer  "vimeo_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "slug"
   end
 
+  add_index "videos", ["slug"], name: "index_videos_on_slug", unique: true, using: :btree
   add_index "videos", ["video_category_id"], name: "index_videos_on_video_category_id", using: :btree
 
   add_foreign_key "videos", "video_categories"
