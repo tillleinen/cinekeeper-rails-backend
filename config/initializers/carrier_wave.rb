@@ -10,5 +10,6 @@ CarrierWave.configure do |config|
     config.fog_directory  = ENV['AWS_BUCKET'] 
   else 
     config.storage = :file
+    config.asset_host = ENV['DEFAULT_HOST']
   end
 end
