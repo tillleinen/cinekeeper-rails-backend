@@ -6,7 +6,7 @@ node :imageSrc do |video_category|
 end
 
 child :videos do
-  attributes :id, :name, :slug
+  attributes :id, :name, :slug, :vimeo_id
   node :imageSrc do |video|
     video.image.url
   end
