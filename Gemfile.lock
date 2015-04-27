@@ -247,6 +247,7 @@ GEM
       railties (>= 3.1)
       thread_safe (~> 0.3.1)
     rack (1.6.0)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -339,6 +340,7 @@ DEPENDENCIES
   mini_magick
   pg
   rabl-rails
+  rack-cors
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

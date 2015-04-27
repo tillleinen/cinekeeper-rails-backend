@@ -26,5 +26,13 @@ module CinekeeperApi
     config.action_mailer.default_url_options = { host: ENV['DEFAULT_HOST'] }
 
     config.i18n.default_locale = :de
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
   end
 end

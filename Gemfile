@@ -56,3 +56,5 @@ gem 'activeadmin-sortable'
 gem 'rabl-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'annotate', '~> 2.6.6'
+
+gem 'rack-cors', :require => 'rack/cors'
