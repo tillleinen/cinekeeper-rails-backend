@@ -21,6 +21,8 @@ class VideoCategory < ActiveRecord::Base
 
   has_many :videos, -> { order(:position) }
 
+  validates :name, :image, presence: true
+
   mount_uploader :image, ImageUploader
   acts_as_list
 

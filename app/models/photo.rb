@@ -14,6 +14,8 @@
 class Photo < ActiveRecord::Base
   default_scope { order(:position) }
 
+  validates :image, presence: true
+
   mount_uploader :image, ImageUploader
   acts_as_list
 end

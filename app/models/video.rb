@@ -24,6 +24,8 @@ class Video < ActiveRecord::Base
   
   belongs_to :video_category
 
+  validates :video_category, :name, :image, :vimeo_id, presence: true
+
   mount_uploader :image, ImageUploader
   acts_as_list scope: :video_category
 
