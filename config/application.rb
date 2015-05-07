@@ -34,5 +34,6 @@ module CinekeeperApi
       end
     end
 
+    config.middleware.use Rack::Deflater
   end
 end
