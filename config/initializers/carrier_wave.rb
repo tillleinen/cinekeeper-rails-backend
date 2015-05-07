@@ -7,7 +7,8 @@ CarrierWave.configure do |config|
       :aws_secret_access_key  => ENV['AWS_SECRET'],
       :region                 => ENV['AWS_REGION']
     }
-    config.fog_directory  = ENV['AWS_BUCKET'] 
+    config.fog_directory  = ENV['AWS_BUCKET']
+    config.aws_attributes = { :cache_control => 'max-age=315576000', :expires => 1.year.from_now.httpdate }
   else 
     config.storage = :file
     config.asset_host = ENV['DEFAULT_HOST']
