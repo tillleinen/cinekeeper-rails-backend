@@ -51,7 +51,7 @@ gem 'devise'
 
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'fog'
+gem 'carrierwave-aws'
 gem 'carrierwave-imageoptimizer'
 
 gem 'acts_as_list'
