@@ -1,13 +1,6 @@
 collection :@video_categories
-attributes :id, :name, :slug
-
-node :imageSrc do |video_category|
-  video_category.image.url
-end
+attributes :id, :name, :slug, :image
 
 child :videos do
-  attributes :id, :name, :slug, :vimeo_id
-  node :imageSrc do |video|
-    video.image.url
-  end
+  attributes :id, :name, :slug, :vimeo_id, :image
 end
