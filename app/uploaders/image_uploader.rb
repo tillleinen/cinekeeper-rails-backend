@@ -38,7 +38,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
 
-  process optimize: [{ quality: 80 }]
+  process :optimize
 
   version :thumb do
     process :resize_to_fit => [100, 100]
