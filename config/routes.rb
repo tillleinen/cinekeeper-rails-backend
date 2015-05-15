@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :video_categories, only: :index
     resources :photos, only: :index
     resources :behind_the_scenes_photos, only: :index
+    resources :clients, only: :index
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
