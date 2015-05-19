@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515155714) do
+ActiveRecord::Schema.define(version: 20150519092929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,9 +92,10 @@ ActiveRecord::Schema.define(version: 20150515155714) do
     t.string   "name"
     t.integer  "position"
     t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "slug"
+    t.boolean  "play_instantly"
   end
 
   add_index "video_categories", ["slug"], name: "index_video_categories_on_slug", unique: true, using: :btree

@@ -2,13 +2,14 @@
 #
 # Table name: video_categories
 #
-#  id         :integer          not null, primary key
-#  name       :string
-#  position   :integer
-#  image      :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  slug       :string
+#  id             :integer          not null, primary key
+#  name           :string
+#  position       :integer
+#  image          :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  slug           :string
+#  play_instantly :boolean
 #
 # Indexes
 #
