@@ -1,4 +1,5 @@
 ActiveAdmin.register Photo do
+  config.paginate = false
   actions :all, except: [:show]
   config.sort_order = 'position_asc'
   sortable
