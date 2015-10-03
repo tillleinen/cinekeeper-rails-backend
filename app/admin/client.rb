@@ -3,7 +3,7 @@ ActiveAdmin.register Client do
   config.sort_order = 'position_asc'
   sortable
 
-  permit_params :position, :image, :name
+  permit_params :position, :image, :name, :url
 
   index do
     sortable_handle_column
@@ -11,6 +11,7 @@ ActiveAdmin.register Client do
     column :image do |client|
       image_tag(client.image.url(:thumb))
     end
+    column :url
     actions
   end
 
@@ -18,6 +19,7 @@ ActiveAdmin.register Client do
     inputs 'Details' do
       input :name
       input :image, :hint => image_tag(f.object.image.url(:thumb)) 
+      input :url
     end
     actions
   end

@@ -1,2 +1,2 @@
 collection :@clients
-attributes :id, :image
+attributes :id, :image, :url
