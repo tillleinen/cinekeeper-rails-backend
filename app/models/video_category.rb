@@ -10,6 +10,7 @@
 #  updated_at     :datetime         not null
 #  slug           :string
 #  play_instantly :boolean
+#  url            :string
 #
 # Indexes
 #

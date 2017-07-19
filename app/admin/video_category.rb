@@ -4,7 +4,7 @@ ActiveAdmin.register VideoCategory do
   config.sort_order = 'position_asc'
   sortable
 
-	permit_params :name, :position, :image, :slug, :play_instantly
+	permit_params :name, :position, :image, :slug, :url
 
   index do
     sortable_handle_column
@@ -22,6 +22,7 @@ ActiveAdmin.register VideoCategory do
       input :play_instantly
       input :slug, hint: 'Achtung: Wird in der URL verwendet. Wenn geändert, werden bestehende Links unter Umständen unbrauchbar. Beim erstellen leer lassen um den Slug automatisch generieren zu lassen.'
       input :image, :hint => image_tag(f.object.image.url(:thumb)) 
+      input :url, hint: 'Optional. Wenn gesetzt leitet ein Klick auf die Kategorie automatisch zur entsprechenden URL weiter.'
     end
     actions
   end
