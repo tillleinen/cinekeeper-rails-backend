@@ -4,7 +4,7 @@ ActiveAdmin.register VideoCategory do
   config.sort_order = 'position_asc'
   sortable
 
-	permit_params :name, :position, :image, :slug, :url
+	permit_params :name, :position, :image, :slug, :url, :play_instantly
 
   index do
     sortable_handle_column
